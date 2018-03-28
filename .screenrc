@@ -1,0 +1,15 @@
+hardstatus on
+hardstatus alwayslastline
+startup_message off
+hardstatus string "%{= kr}%-w%{.rW}%n %t%{-}%+w %=%{..r} %H %{..Y} %m/%d %C%a "
+term xterm-256color
+vbell on
+
+screen -t console 0
+screen -t disco 1
+screen -t dev 2
+screen -t exploit 3
+
+defscrollback 5000
+termcapinfo xterm-256color ti@:te@
+termcapinfo xterm-256color 'hs:ts=\E]2;:fs=07:ds=\E]2;screen07'
